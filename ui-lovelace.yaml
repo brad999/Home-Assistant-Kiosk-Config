@@ -1,0 +1,403 @@
+resources:
+  - url: /local/kiosk.js
+    type: js
+
+title: Ahlers Home
+# Exclude entities from "Unused entities" view
+excluded_entities:
+
+views:
+  - title: Kiosk
+    id: kiosk
+    panel: true
+    cards:
+      - type: picture-elements
+        image: /local/kiosk/active.svg
+        elements:
+            ## DATETIME
+            - type: state-label
+              entity: sensor.friendly_date
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 125%
+                top: 1.7%
+                left: 20.2%
+            - type: state-label
+              entity: sensor.friendly_time
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 125%
+                top: 1.7%
+                left: 92%
+            ## WEATHER
+            - type: image
+              entity: sensor.dark_sky_icon
+              state_image:
+                "partly-cloudy-night": /local/kiosk/weather/partlycloudynight_large.svg
+                "partly-cloudy-day": /local/kiosk/weather/partlycloudyday_large.svg
+                "cloudy": /local/kiosk/weather/cloudy_large.svg
+                "cloud": /local/kiosk/weather/cloudy_large.svg
+                "sun": /local/kiosk/weather/sunny_large.svg
+                "clear-nigt": /local/kiosk/weather/clearnight_large.svg
+                "clear-day": /local/kiosk/weather/sunny_large.svg
+                "fog": /local/kiosk/weather/fog_large.svg
+                "rain": /local/kiosk/weather/rain_large.svg
+                "sleet": /local/kiosk/weather/sleet_large.svg
+                "snow": /local/kiosk/weather/snow_large.svg
+                "wind": /local/kiosk/weather/wind_large.svg
+              style:
+                width: 18%
+                top: 11%
+                left: 23%
+            - type: state-label
+              entity: sensor.outside_temp
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 370%
+                top: 9%
+                left: 49%
+            - type: state-label
+              entity: sensor.forecast_0_weather
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 90%
+                top: 13%
+                left: 48%
+            - type: state-label
+              entity: sensor.wind_speed
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 90%
+                top: 15%
+                left: 48%
+            - type: state-label
+              entity: sensor.dark_sky_hourly_summary
+              style:
+                color: rgba( 212,233,244,1 )
+                font-size: 90%
+                top: 18%
+                left: 43%
+            - type: image
+              entity: camera.radar
+              camera_image: camera.radar
+              style:
+                width: 26%
+                top: 11.5%
+                left: 76%
+            - type: state-label
+              entity: sensor.forecast_1
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 90%
+                top: 20.2%
+                left: 21%
+            - type: image
+              entity: sensor.dark_sky_icon_1
+              state_image:
+                "partly-cloudy-night": /local/kiosk/weather/partlycloudynight_large.svg
+                "partly-cloudy-day": /local/kiosk/weather/partlycloudyday_large.svg
+                "cloudy": /local/kiosk/weather/cloudy_large.svg
+                "cloud": /local/kiosk/weather/cloudy_large.svg
+                "sun": /local/kiosk/weather/sunny_large.svg
+                "clear-nigt": /local/kiosk/weather/clearnight_large.svg
+                "clear-day": /local/kiosk/weather/sunny_large.svg
+                "fog": /local/kiosk/weather/fog_large.svg
+                "rain": /local/kiosk/weather/rain_large.svg
+                "sleet": /local/kiosk/weather/sleet_large.svg
+                "snow": /local/kiosk/weather/snow_large.svg
+                "wind": /local/kiosk/weather/wind_large.svg
+              style:
+                width: 12%
+                top: 25.5%
+                left: 21%
+            - type: state-label
+              entity: sensor.forecast_1_weather
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 30%
+                left: 21%
+            - type: state-label
+              entity: sensor.forecast_2
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 90%
+                top: 20.2%
+                left: 51.5%
+            - type: image
+              entity: sensor.dark_sky_icon_2
+              state_image:
+                "partly-cloudy-night": /local/kiosk/weather/partlycloudynight_large.svg
+                "partly-cloudy-day": /local/kiosk/weather/partlycloudyday_large.svg
+                "cloudy": /local/kiosk/weather/cloudy_large.svg
+                "cloud": /local/kiosk/weather/cloudy_large.svg
+                "sun": /local/kiosk/weather/sunny_large.svg
+                "clear-nigt": /local/kiosk/weather/clearnight_large.svg
+                "clear-day": /local/kiosk/weather/sunny_large.svg
+                "fog": /local/kiosk/weather/fog_large.svg
+                "rain": /local/kiosk/weather/rain_large.svg
+                "sleet": /local/kiosk/weather/sleet_large.svg
+                "snow": /local/kiosk/weather/snow_large.svg
+                "wind": /local/kiosk/weather/wind_large.svg
+              style:
+                width: 12%
+                top: 25.5%
+                left: 51.5%
+            - type: state-label
+              entity: sensor.forecast_2_weather
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 30%
+                left: 51.5%
+            - type: state-label
+              entity: sensor.forecast_3
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 90%
+                top: 20.2%
+                left: 80%
+            - type: image
+              entity: sensor.dark_sky_icon_3
+              state_image:
+                "partly-cloudy-night": /local/kiosk/weather/partlycloudynight_large.svg
+                "partly-cloudy-day": /local/kiosk/weather/partlycloudyday_large.svg
+                "cloudy": /local/kiosk/weather/cloudy_large.svg
+                "cloud": /local/kiosk/weather/cloudy_large.svg
+                "sun": /local/kiosk/weather/sunny_large.svg
+                "clear-nigt": /local/kiosk/weather/clearnight_large.svg
+                "clear-day": /local/kiosk/weather/sunny_large.svg
+                "fog": /local/kiosk/weather/fog_large.svg
+                "rain": /local/kiosk/weather/rain_large.svg
+                "sleet": /local/kiosk/weather/sleet_large.svg
+                "snow": /local/kiosk/weather/snow_large.svg
+                "wind": /local/kiosk/weather/wind_large.svg
+              style:
+                width: 12%
+                top: 25.5%
+                left: 80%
+            - type: state-label
+              entity: sensor.forecast_3_weather
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 30%
+                left: 80%
+            ## CLIMATE
+            - type: state-label
+              entity: sensor.hvac_status
+              style:
+                color: rgba( 212,233,244,1 )
+                font-size: 100%
+                top: 35%
+                left: 91%
+            - type: state-label
+              entity: sensor.current_temperature
+              suffix: '°'
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 350%
+                top: 41%
+                left: 20.2%
+            - type: state-label
+              entity: sensor.set_temperature
+              suffix: '°'
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 350%
+                top: 41%
+                left: 42%
+            - type: image
+              entity: climate.home
+              image: /local/kiosk/security/transparent.svg
+              style:
+                width: 15%
+                top: 41%
+                left: 42%
+            - type: state-label
+              entity: sensor.home_humidity
+              prefix: 'Humidity: '
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 110%
+                top: 47.7%
+                left: 31%
+            - type: state-label
+              entity: sensor.home_temperature
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 110%
+                top: 38.4%
+                left: 85%
+            - type: state-label
+              entity: sensor.bedroom_temperature
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 110%
+                top: 41.2%
+                left: 85%
+            - type: state-label
+              entity: sensor.kids_room_temperature
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 110%
+                top: 44.2%
+                left: 85%
+            - type: state-label
+              entity: sensor.basement_temperature
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 110%
+                top: 47%
+                left: 85%
+            ## SECURITY
+            - type: state-label
+              entity: alarm_control_panel.ahlers_alarm
+              style:
+                color: rgba( 212,233,244,1 )
+                font-size: 100%
+                top: 69.5%
+                left: 88%
+            - type: image
+              entity: alarm_control_panel.ahlers_alarm
+              state_image:
+                "disarmed": /local/kiosk/security/disarmed.svg
+                "armed_home": /local/kiosk/security/armed_stay.svg
+                "armed_away": /local/kiosk/security/armed_away.svg
+                "pending": /local/kiosk/security/pending.svg
+              style:
+                width: 20%
+                top: 80%
+                left: 20%
+            - type: state-label
+              entity: alarm_control_panel.ahlers_alarm
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 88%
+                left: 20%
+            - type: image
+              entity: switch.front_door_lock_switch
+              tap_action: toggle
+              state_image:
+                "on": /local/kiosk/security/locked.svg
+                "off": /local/kiosk/security/unlocked.svg
+              style:
+                width: 10%
+                top: 76%
+                left: 55%
+            - type: state-label
+              entity: sensor.front_door_lock_sensor
+              prefix: 'Front door is '
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 81%
+                left: 55%
+            - type: image
+              entity: switch.back_door_lock_switch
+              tap_action: toggle
+              state_image:
+                "on": /local/kiosk/security/locked.svg
+                "off": /local/kiosk/security/unlocked.svg
+              style:
+                width: 10%
+                top: 76%
+                left: 80%
+            - type: state-label
+              entity: lock.kwikset_touchpad_electronic_deadbolt_locked
+              prefix: 'Back door is '
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 81%
+                left: 80%
+            - type: image
+              entity: cover.garage_door_opener
+              tap_action: toggle
+              state_image:
+                "closed": /local/kiosk/security/garage_closed.svg
+                "open": /local/kiosk/security/garage_open.svg
+              style:
+                width: 10%
+                top: 86%
+                left: 55%
+            - type: state-label
+              entity: cover.garage_door_opener
+              prefix: 'Garage door is '
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 90%
+                left: 55%
+            - type: image
+              entity: switch.aeotec_dsc26103_micro_switch_2nd_edition_switch
+              tap_action: toggle
+              state_image:
+                "off": /local/kiosk/security/light_off.svg
+                "on": /local/kiosk/security/light_on.svg
+              style:
+                width: 10%
+                top: 85.5%
+                left: 80%
+            - type: state-label
+              entity: switch.aeotec_dsc26103_micro_switch_2nd_edition_switch
+              prefix: 'Outside lights are '
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 90%
+                left: 80%
+            - type: state-label
+              entity: sensor.brad_location
+              prefix: 'Brad is '
+              style:
+                color: rgba( 212,233,244,1 )
+                font-size: 90%
+                top: 93%
+                left: 16.5%
+            - type: state-label
+              entity: sensor.lauren_location
+              prefix: 'Lauren is '
+              style:
+                color: rgba( 212,233,244,1 )
+                font-size: 90%
+                top: 93%
+                left: 84.5%
+            ## CALENDAR
+            - type: state-label
+              entity: sensor.next_event
+              style:
+                color: rgba( 255,255,255,1 )
+                font-size: 125%
+                top: 97.7%
+                left: 24%
+            ## CAMERAS
+            - type: image
+              entity: camera.driveway
+              camera_image: camera.driveway
+              style:
+                width: 25%
+                top: 59%
+                left: 20%
+            - type: state-label
+              entity: sensor.label_camera1
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 65%
+                left: 20%
+            - type: image
+              entity: camera.garage_camera
+              camera_image: camera.garage_camera
+              style:
+                width: 23%
+                top: 59%
+                left: 50%
+            - type: state-label
+              entity: sensor.label_camera2
+              style:
+                color: rgba( 70,109,128,1 )
+                font-size: 90%
+                top: 65%
+                left: 50%
